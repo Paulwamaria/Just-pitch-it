@@ -52,3 +52,20 @@ def business_pitches():
     pitches = Pitch.get_pitches('business')
 
     return render_template("business_pitches.html", pitches = pitches)
+
+
+@main.route('/pitches/screenplay_pitches')
+def screenplay_pitches():
+
+    pitches = Pitch.get_pitches('screenplay')
+
+    return render_template("screenplay_pitches.html", pitches = pitches)
+
+
+
+@main.route('/pitches/project_pitches')
+def project_pitches():
+
+    pitches = Pitch.get_pitches('project')
+
+    return render_template("project_pitches.html", pitches = pitches)

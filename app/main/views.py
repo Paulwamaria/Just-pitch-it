@@ -1,18 +1,18 @@
-from flask import render_template, request,redirect_url,url_for,abort
+from flask import render_template, request,redirect,url_for,abort
 from . import main
 from flask_login import login_required, current_user
 from ..models import User, Pitch, Comment
-from db, import photos,db
-import dateTime
+from .. import photos,db
+import DateTime
 
 @main.route('/')
 def index():
     title = "Welcome to just pitch it"
 
-    business_pitches = picth.get_pitches('business')
-    screenplay_pitches = picth.get_pitches('screenplay')
-    project_pitches = picth.get_pitches('project')
-    return render_template('index.html',title = title,business=business,screenplay = screenplay)
+    business_pitches = Pitch.get_pitches('business')
+    screenplay_pitches = Pitch.get_pitches('screenplay')
+    project_pitches = Pitch.get_pitches('project')
+    return render_template('index.html',title = title,business=business_pitches,screenplay = screenplay_pitches, project = project_pitches)
 
 
 @main.route('/user/<uname>/update/pic',methods= ['POST'])

@@ -1,20 +1,22 @@
 
 import os
-
+from dotenv import load_dotenv
+load_dotenv()
 class Config:
     '''
     General configuration parent class
     '''
-    SECRET_KEY = os.environ.get('SECRET_KEY')
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://paul:leejones1@localhost/minutepitch'
+    SECRET_KEY = os.environ['SECRET_KEY']
+    DEBUG=True
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://paul:leejones1@:5432/pitches'
     UPLOADED_PHOTOS_DEST ='app/static'
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     # email configurations
-    MAIL_SERVER = 'smtp.gmail.com'True
+    MAIL_SERVER = 'smtp.gmail.com'
     MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
-    MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD
+    MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
     MAIL_PORT = 587
-    MAIL_USE_TLS = ")
+    MAIL_USE_TLS = True
 
 class ProdConfig(Config):
     '''
@@ -30,7 +32,7 @@ class TestConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://paul:leejones1@localhost/minutepitch'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://paul:leejones1@:5432/pitches'
 
 class DevConfig(Config):
     '''
@@ -38,7 +40,7 @@ class DevConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://paul:leejones1@localhost/minutepitch'
+    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://paul:leejones1@:5432/pitches'
 
     DEBUG = True
     ENV = 'development'

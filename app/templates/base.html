@@ -1,12 +1,20 @@
+{% extends 'bootstrap/base.html' %}
 <html>
     {% block styles %}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
     {% endblock %}
+
     <body>
     {% block navbar %}
-    {% include "navbar.html" %}
+        {% include "navbar.html" %}
     {% endblock %}
+
     {% block content %}
+
+
+
+
     {% endblock %}
     {% block scripts %}
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

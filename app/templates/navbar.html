@@ -1,5 +1,6 @@
-<div class="navbar navbar-dark" role="navigation" style="margin-bottom:0; border-bottom: 1px solid;">
-    <div class="container-fluid" style="display: inline-block">
+<div class="navbar navbar-dark" role="navigation"
+    style="margin-bottom:0; border-bottom: 1px solid; display:inline-block; padding-left:10px">
+    <div class="container-fluid">
 
         <div class="navbar navbar-expand-lg navbar-right " style="display: inline-block">
             <div class="nav navbar-nav navbar-expand-lg " style="display: inline-block">
@@ -8,23 +9,33 @@
                 <a href="{{url_for('main.screenplay_pitches')}}">Screenplay pitches</a>
                 <a href="{{url_for('main.project_pitches')}}">project pitches</a>
             </div>
+            <div>
 
-            <ul class="nav navbar-nav navbar-right">
+            </div>
+          
+
+            <ul class="nav navbar-nav navbar-right" id="lgi">
                 {% if current_user.is_authenticated %}
                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                         aria-haspopup="true" aria-expanded="false">{{current_user.username| capitalize}} <span
                             class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="{{url_for('main.profile', uname=current_user.username)}}">Profile</a></li>
-                        <li><a href="{{url_for('main.user_pitches', uname=current_user.username)}}">My Pitches</a></li>
+                        <li></li><a href="/profile/{{current_user.username}}">Profile</a></li></li>
+                        <li></li><a href="{{url_for('main.user_pitches', uname=current_user.username)}}">My Pitches</a></li></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
+                        <li></li><a href="{{url_for('auth.logout')}}" style="float:right">Sign out</a></li></li>
                     </ul>
                 </li>
                 {% else %}
-                <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
+                <ul class="auth">
+                    <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
+                    
+                    <li><a href="{{url_for('auth.register')}}">Register</a></li> 
+                </ul>
+               
+                {%endif%}
+
             </ul>
-            {%endif%}
         </div>
     </div>
 </div>

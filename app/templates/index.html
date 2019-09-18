@@ -1,15 +1,17 @@
 {% extends 'base.html' %}
 {% import 'macros.html' as macro %}
 <!-- Styles block -->
-
 {%block styles%}
-{{ super() }}
-<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    {{ super() }}
+    <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Vidaloka&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 {%endblock%}
+
 <!-- Content block -->
 {%block content%}
+
 <div class="jumbotron text-center"
-    style="background-color: rgb(52, 159, 230); color: #fff; padding: 55px 25px; font-family: 'Monoton', cursive;">
+    style="background-color: rgb(52, 159, 230); color: #fff; padding: 55px 25px; font-family: 'Lobster Two', cursive;">
     <h1>Just Pitch It!</h1>
 </div>
 <div class="container" style="padding-bottom: 20px;">
@@ -20,22 +22,22 @@
     <div class="row">
         <div class="col-md-4">
             <div class="well well-lg">
-                <h3>Business Pitches</h3>
+                <h3 class= "text-info">Business Pitches</h3>
                 <p>You have a business idea? Just pitch it.</p>
                 <a href="{{url_for('main.business_pitches')}}" class="btn btn-primary -center">View</a>
             </div>
         </div>
         <div class="col-md-4">
             <div class="well well-lg">
-                <h3>Screenplay Pitches</h3>
-                <p>Want to talk about your screenplay, you're in the right place.</p>
+                <h3 class="text-info">Screenplay Pitches</h3>
+                <p>That movie you've wanted to produce all along, Its time to pitch it.</p>
                 <a href="{{url_for('main.screenplay_pitches')}}" class="btn btn-primary -center">View</a>
             </div>
         </div>
         <div class="col-md-4">
             <div class="well well-lg">
-                <h3>Project Pitches</h3>
-                <p>Have a project in mind, why not picth it for a potential investor</p>
+                <h3 class="text-info">Project Pitches</h3>
+                <p>Have a project in mind, why not pitch it for a potential investor</p>
                 <a href="{{url_for('main.project_pitches')}}" class="btn btn-primary -center">View</a>
             </div>
         </div>

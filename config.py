@@ -8,7 +8,6 @@ class Config:
     '''
     SECRET_KEY = os.environ['SECRET_KEY']
     DEBUG=True
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://paul:leejones1@:5432/pitches'
     UPLOADED_PHOTOS_DEST ='app/static/photos'
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     # email configurations

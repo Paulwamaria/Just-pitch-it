@@ -1,6 +1,6 @@
 
 body{
-    background-image:url("/photos/cropland.jpg");
+   
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -30,7 +30,7 @@ body{
 a{
     padding-left: 10px;
     padding-right: 5px;
-    font-size:16px;
+    font-size:18px;
     background-color:white;
 }
 #lgi{
@@ -44,9 +44,10 @@ a{
 ul{
     text-decoration: none;   
 }
-.prof{
-    width:50%;
-    height:50%;
+#prof{
+    width:30%;
+    height:30%;
+    border-radius:10%
 }
 forms{
     background-color: blue;

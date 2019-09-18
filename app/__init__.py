@@ -11,7 +11,7 @@ from flask_mail import Mail
 bootstrap= Bootstrap()
 
 db = SQLAlchemy()
-mail = Mail()
+mail = Mail() >
 photos = UploadSet('photos',IMAGES)
 
 login_manager = LoginManager()

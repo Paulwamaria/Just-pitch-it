@@ -1,8 +1,8 @@
-{% extends 'base.html' %}
+{% extends 'bootstrap/base.html' %}
 {% macro displayPitches(pitches_list)%}
 {%for pitch in pitches_list%}
 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 review-card">
-    <div class="well well-lg panel panel-primary panel-default">
+    <div class="panel panel-primary panel-default">
         <div class="panel-header">
             <h4 class="text-info">{{pitch.pitch_title}}</h4>
         </div>

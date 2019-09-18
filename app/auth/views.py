@@ -33,7 +33,7 @@ def register():
         db.session.commit()
 
         mail_message("Welcome to Just Pitch it",
-                     "welcome_user", user.email, user=user)
+                     "welcome_user.txt", user.email, user=user)
 
         return redirect(url_for('auth.login'))
         title = "New Account"

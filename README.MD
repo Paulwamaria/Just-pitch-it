@@ -31,7 +31,12 @@ Paul Kamau Wamaria
 
 
 
-##Installation 
+## Installation 
+
+* Clone the repo from this link https://github.com/Paulwamaria/Just-pitch-it.git
+* Install python3.6
+* Install the requirements as per the requirements.txt
+* Use the command ./start.sh to run the application locally
 
  
 
